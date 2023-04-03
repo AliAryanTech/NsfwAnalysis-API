@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js"
   },
-  "keywords": ['nsfw', 'api', 'nsfwjs', 'express-api'],
+  "keywords": ["nsfwjs", "express-api"],
   "author": "Alι_Aryαɴ",
   "license": " Apache-2.0",
   "dependencies": {
