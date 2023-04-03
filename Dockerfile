@@ -1,8 +1,21 @@
-FROM node:lts-buster
+FROM node:14-buster-slim
 
-RUN apt-get update && apt-get upgrade -y
-RUN apt-get install -y ffmpeg wget libc6-dev
-COPY package.json .
-RUN yarn install --frozen-lockfile
+RUN apt-get update && \ 
+  apt-get install -y build-essential \
+  wget \
+  python3 \
+  make \
+  gcc \ 
+  libc6-dev 
+
+WORKDIR /usr/src/app
+
+COPY package*.json .
+
+RUN npm install
+
 COPY . .
-CMD ["yarn", "start"]
+
+EXPOSE 8080
+
+CMD ["npm", "start"]
