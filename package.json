@@ -8,7 +8,7 @@
   },
   "keywords": ["nsfwjs", "express-api"],
   "author": "Alι_Aryαɴ",
-  "license": " Apache-2.0",
+  "license": " MIT",
   "dependencies": {
     "@tensorflow/tfjs-node": "^3.11.0",
     "axios": "^1.3.3",
